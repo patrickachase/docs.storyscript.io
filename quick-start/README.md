@@ -18,7 +18,7 @@ First, install our CLI:
 <summary><h4><img src="../assets/apple-logo.svg" width="15"> macOS</h4></summary>
 
 ```shell
-brew install asyncy/brew/asyncy
+$ brew install asyncy/brew/asyncy
 ```
 
 </details>
@@ -55,7 +55,7 @@ sudo snap install asyncy --classic
 <summary><h4>Direct from Python</h4></summary>
 
 ```shell
-pip install --user asyncy
+$ pip install --user asyncy
 ```
 
 We **strongly recommend** using the other installation techniques.
@@ -68,7 +68,7 @@ We **strongly recommend** using the other installation techniques.
 Next, login with your GitHub account:
 
 ```shell
-asyncy login
+$ asyncy login
 ```
 
 All done! You're all set to create and deploy apps written in Storyscript.
@@ -82,10 +82,10 @@ If you're having trouble logging in via GitHub, please [reach out to us](http://
 
 Let's create your first application, to be able to check out the samples which are bundled.
 ```shell
-mkdir first_app && cd first_app
+$ mkdir first_app && cd first_app
 ```
 ```shell
-asyncy apps create
+$ asyncy apps create
 ```
 
 > <small>Doing so will create `asyncy.yml` in the current directory. This file contains metadata about your new app.</small>
@@ -93,10 +93,11 @@ asyncy apps create
 We have created a few examples that can help you bootstrap your project: Let's start you off with a simple hello world serverless http endpoint:
 
 ```shell
-asyncy bootstrap http > http.story && cat http.story
+$asyncy bootstrap http > http.story
 ```
 
-```coffeescript
+```shell
+$ cat http.story
 when http server listen method: 'get' path: '/' as request
     request write content: 'Hello world!'
 ```
@@ -104,7 +105,7 @@ when http server listen method: 'get' path: '/' as request
 Let's deploy this story:
 
 ```shell
-asyncy deploy
+$ asyncy deploy
 ```
 ```text
 Compiling Stories...
@@ -116,9 +117,9 @@ Waiting for deployment to complete... |
 If your story listens to HTTP requests, visit https://competent-nash-82.asyncyapp.com
 ```
 
-:sparkles::cake::sparkles: Congratulations! You have just deployed your first Story!
+Congratulations! You have just deployed your first Story! :sparkles: :cake: :sparkles:
 
-`asyncy deploy` will deploy all the stories in your project at once.
+`$ asyncy deploy` will deploy all the stories in your project at once.
 
 ::: tip See it live!
 
@@ -135,7 +136,8 @@ Ready to redeploy your application? We made it easy and intuitive.
 
 Just run the same `deploy` command again:
 ```shell
-asyncy deploy
+$ asyncy deploy
 ```
 
-:sparkles::cake::sparkles: Your application is now live!
+Your application is now live!
+:sparkles: :cake: :sparkles:
